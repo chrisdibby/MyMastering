@@ -11,13 +11,13 @@ import java.util.List;
 
 
 @Stateless
-public class UserBean {
+public class RegistrationBean {
 
     @PersistenceContext(unitName = "MyMasteringPU")
     private EntityManager entityManager;
 
-    public boolean checkPassword(String login, String password){
-        if(StringUtils.isEmpty(login) || StringUtils.isEmpty(password)){
+    public boolean checkPassword(String login, String password, String email){
+        if(StringUtils.isEmpty(login) || StringUtils.isEmpty(password) || StringUtils.isEmpty(email)){
             return false;
         }
 
@@ -33,8 +33,8 @@ public class UserBean {
         return false;
     }
 
-    public boolean createUser(String login, String password){
-        if(StringUtils.isEmpty(login) || StringUtils.isEmpty(password)){
+    public boolean createUser(String login, String password, String email){
+        if(StringUtils.isEmpty(login) || StringUtils.isEmpty(password) || StringUtils.isEmpty(email)){
             return false;
         }
 
@@ -46,6 +46,7 @@ public class UserBean {
         userEntity = new UserEntity();
         userEntity.setLogin(login);
         userEntity.setPassword(password);
+        userEntity.setEmail(email);
         entityManager.persist(userEntity);
 
         return true;

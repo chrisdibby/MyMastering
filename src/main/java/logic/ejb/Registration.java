@@ -1,7 +1,6 @@
-package logic.cdi;
+package logic.ejb;
 
 import logic.domain.UserEntity;
-import logic.ejb.UserBean;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
@@ -12,16 +11,17 @@ import java.util.List;
 
 @Named
 @SessionScoped
-public class UserCDI implements Serializable{
+public class Registration implements Serializable{
 
     private String login;
     private String password;
+    private String email;
 
     private boolean loginSuccess;
     private boolean createSuccess;
 
     @EJB
-    private UserBean userBean;
+    private RegistrationBean registrationBean;
 
     public String getLogin() {
         return login;
@@ -38,6 +38,10 @@ public class UserCDI implements Serializable{
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email = email; }
 
     public boolean isLoginSuccess() {
         return loginSuccess;
@@ -56,14 +60,14 @@ public class UserCDI implements Serializable{
     }
 
     public void checkPassword(){
-        loginSuccess = userBean.checkPassword(login, password);
+        loginSuccess = registrationBean.checkPassword(login, password, email);
     }
 
     public void createUser(){
-        createSuccess = userBean.createUser(login, password);
+        createSuccess = registrationBean.createUser(login, password, email);
     }
 
     public List<UserEntity> getAllUsers(){
-        return userBean.getAllUsers();
+        return registrationBean.getAllUsers();
     }
 }

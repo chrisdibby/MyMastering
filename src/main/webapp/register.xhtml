@@ -12,13 +12,16 @@
     <h:form>
         <h:panelGrid columns="2">
             <h:outputText value="Login: "/>
-            <h:inputText value="#{userCDI.login}" />
+            <h:inputText value="#{registration.login}" />
 
             <h:outputText value="Password: "/>
-            <h:inputText value="#{userCDI.password}" />
+            <h:inputText value="#{registration.password}" />
+
+            <h:outputText value="Password: "/>
+            <h:inputText value="#{registration.email}" />
 
             <h:outputText value="Action: "/>
-            <h:commandLink value="Create" action="#{userCDI.createUser()}"/>
+            <h:commandLink value="Create" action="#{registration.createUser()}"/>
         </h:panelGrid>
     </h:form>
 </h:body>
