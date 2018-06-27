@@ -1,5 +1,7 @@
-package logic.domain;
+package logic.usercards.domain;
 
+
+import logic.auth.domain.MasterEntity;
 
 import javax.persistence.*;
 

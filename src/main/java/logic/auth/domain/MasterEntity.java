@@ -1,4 +1,6 @@
-package logic.domain;
+package logic.auth.domain;
+
+import logic.usercards.domain.CustomerReviewEntity;
 
 import javax.persistence.*;
 import java.util.Set;

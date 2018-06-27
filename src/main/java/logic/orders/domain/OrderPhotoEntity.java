@@ -1,5 +1,7 @@
-package logic.domain;
+package logic.orders.domain;
 
+
+import logic.orders.domain.CustomerOrderEntity;
 
 import javax.persistence.*;
 

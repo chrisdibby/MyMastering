@@ -1,4 +1,6 @@
-package logic.domain;
+package logic.orders.domain;
+
+import logic.auth.domain.CustomerEntity;
 
 import javax.persistence.*;
 import java.util.Date;

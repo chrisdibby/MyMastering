@@ -1,6 +1,6 @@
-package logic.ejb;
+package logic.auth.beans;
 
-import logic.domain.CustomerEntity;
+import logic.auth.domain.CustomerEntity;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.ejb.Stateless;

@@ -1,4 +1,8 @@
-package logic.domain;
+package logic.usercards.domain;
+
+import logic.auth.domain.CustomerEntity;
+import logic.auth.domain.MasterEntity;
+import logic.orders.domain.CustomerOrderEntity;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -84,7 +88,6 @@ public class CustomerReviewEntity {
     public void setRating(Integer rating) {
         this.rating = rating;
     }
-
 
 
 }

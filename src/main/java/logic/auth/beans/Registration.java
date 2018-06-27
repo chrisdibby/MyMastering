@@ -1,7 +1,6 @@
-package logic.ejb;
+package logic.auth.beans;
 
-import logic.domain.CustomerEntity;
-import logic.ejb.Authentication;
+import logic.auth.domain.CustomerEntity;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;

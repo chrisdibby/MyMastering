@@ -1,5 +1,7 @@
-package logic.domain;
+package logic.usercards.domain;
 
+
+import logic.auth.domain.MasterEntity;
 
 import javax.persistence.*;
 
@@ -40,4 +42,5 @@ public class WorkSpheresEntity {
     public void setCategory(String category) {
         this.category = category;
     }
+
 }

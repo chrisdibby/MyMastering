@@ -1,4 +1,4 @@
-package logic.domain;
+package logic.auth.domain;
 
 
 import javax.persistence.*;
