@@ -7,6 +7,7 @@ import logic.orders.domain.CustomerOrderEntity;
 import javax.persistence.*;
 import java.util.Date;
 
+
 @Entity
 @Table (name="CUSTOMER_REVIEWS")
 public class CustomerReviewEntity {
@@ -32,6 +33,7 @@ public class CustomerReviewEntity {
     private String text;
     @Column (name="rating")
     private Integer rating;
+
 
     public Long getId_customer_review() {
         return id_customer_review;
@@ -88,6 +90,4 @@ public class CustomerReviewEntity {
     public void setRating(Integer rating) {
         this.rating = rating;
     }
-
-
 }

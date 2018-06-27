@@ -1,8 +1,9 @@
 package logic.auth.domain;
 
-
 import javax.persistence.*;
+
 import java.util.Set;
+
 
 @Entity
 @Table(name="STAFF")
@@ -22,6 +23,13 @@ public class StaffEntity {
 
     @OneToMany (fetch = FetchType.EAGER)
     private Set<StaffEntity> staffEntities;
+    public Set<StaffEntity> getStaffEntities() {
+        return staffEntities;
+    }
+    public void setStaffEntities(Set<StaffEntity> staffEntities) {
+        this.staffEntities = staffEntities;
+    }
+
 
     public Long getId_staff() {
         return id_staff;
@@ -61,13 +69,5 @@ public class StaffEntity {
 
     public void setLast_name(String last_name) {
         this.last_name = last_name;
-    }
-
-    public Set<StaffEntity> getStaffEntities() {
-        return staffEntities;
-    }
-
-    public void setStaffEntities(Set<StaffEntity> staffEntities) {
-        this.staffEntities = staffEntities;
     }
 }

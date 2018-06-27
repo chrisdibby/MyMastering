@@ -1,10 +1,10 @@
 package logic.usercards.domain;
 
-
 import logic.auth.domain.CustomerEntity;
 import logic.auth.domain.MasterEntity;
 
 import javax.persistence.*;
+
 
 @Entity
 @Table(name="MASTER_REVIEWS")
@@ -23,6 +23,7 @@ public class MasterReviewEntity {
 
     @Column(name = "description")
     private String description;
+
 
     public Long getId_master_review() {
         return id_master_review;
@@ -55,5 +56,4 @@ public class MasterReviewEntity {
     public void setDescription(String description) {
         this.description = description;
     }
-
 }

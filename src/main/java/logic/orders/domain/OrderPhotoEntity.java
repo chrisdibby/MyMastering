@@ -1,9 +1,7 @@
 package logic.orders.domain;
 
-
-import logic.orders.domain.CustomerOrderEntity;
-
 import javax.persistence.*;
+
 
 @Entity
 @Table(name="ORDER_PHOTOS")
@@ -18,6 +16,7 @@ public class OrderPhotoEntity {
 
     @Column(name="photo")
     private String photo;
+
 
     public Long getId_order_photo() {
         return id_order_photo;

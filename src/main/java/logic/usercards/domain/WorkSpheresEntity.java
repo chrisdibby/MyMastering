@@ -1,9 +1,9 @@
 package logic.usercards.domain;
 
-
 import logic.auth.domain.MasterEntity;
 
 import javax.persistence.*;
+
 
 @Entity
 @Table(name="WORK_SPHERES")
@@ -18,6 +18,7 @@ public class WorkSpheresEntity {
 
     @Column(name="category")
     private String category;
+
 
     public Long getId_work_spheres() {
         return id_work_spheres;
@@ -42,5 +43,4 @@ public class WorkSpheresEntity {
     public void setCategory(String category) {
         this.category = category;
     }
-
 }

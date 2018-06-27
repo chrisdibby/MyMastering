@@ -43,6 +43,9 @@ public class CustomerOrderEntity {
     private Boolean done_or_not;
     @Column (name="master")
     private String master;
+    @Column(name="index")
+    private Long index;
+
 
     public Long getId_customer_order() {
         return id_customer_order;
@@ -162,5 +165,13 @@ public class CustomerOrderEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Long getIndex() {
+        return index;
+    }
+
+    public void setIndex(Long index) {
+        this.index = index;
     }
 }

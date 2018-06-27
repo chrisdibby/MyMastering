@@ -1,8 +1,6 @@
 package logic.orders.domain;
 
-
 import logic.auth.domain.MasterEntity;
-import logic.orders.domain.CustomerOrderEntity;
 
 import javax.persistence.*;
 
@@ -24,6 +22,7 @@ public class MasterOrderEntity {
 
     @Column(name="description")
     private String description;
+
 
     public Long getId_master_order() {
         return id_master_order;

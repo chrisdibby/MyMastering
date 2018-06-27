@@ -5,6 +5,7 @@ import logic.usercards.domain.CustomerReviewEntity;
 import javax.persistence.*;
 import java.util.Set;
 
+
 @Entity
 @Table (name = "MASTERS")
 public class MasterEntity {
@@ -53,19 +54,14 @@ public class MasterEntity {
     @Column (name="rating")
     private Integer rating;
 
-
-
     @OneToMany (fetch = FetchType.EAGER)
     private Set<CustomerReviewEntity> reviewEntities;
-
     public Set<CustomerReviewEntity> getReviewEntities() {
         return reviewEntities;
     }
-
     public void setReviewEntities(Set<CustomerReviewEntity> reviewEntities) {
         this.reviewEntities = reviewEntities;
     }
-
 
 
     public Long getId_master() {
@@ -235,5 +231,4 @@ public class MasterEntity {
     public void setRating(Integer rating) {
         this.rating = rating;
     }
-
 }

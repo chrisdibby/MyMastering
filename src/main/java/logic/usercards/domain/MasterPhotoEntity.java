@@ -1,9 +1,9 @@
 package logic.usercards.domain;
 
-
 import logic.auth.domain.MasterEntity;
 
 import javax.persistence.*;
+
 
 @Entity
 @Table(name="MASTER_PHOTOS")
@@ -18,6 +18,7 @@ public class MasterPhotoEntity {
 
     @Column(name="photo")
     private String photo;
+
 
     public Long getId_master_photo() {
         return id_master_photo;

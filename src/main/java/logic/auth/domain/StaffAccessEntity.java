@@ -1,7 +1,7 @@
 package logic.auth.domain;
 
-
 import javax.persistence.*;
+
 
 @Entity
 @Table(name="STAFF_ACCESS")
@@ -16,6 +16,7 @@ public class StaffAccessEntity {
 
     @Column(name="access")
     private String access;
+
 
     public Long getId_staff_access() {
         return id_staff_access;

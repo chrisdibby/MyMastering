@@ -5,10 +5,10 @@ import logic.usercards.domain.CustomerReviewEntity;
 import javax.persistence.*;
 import java.util.Set;
 
+
 @Entity
 @Table (name = "CUSTOMERS")
 public class CustomerEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_customer;
@@ -35,18 +35,15 @@ public class CustomerEntity {
     private Long telephone;
     @Column (name="is_active")
     private Boolean is_active;
-
+    
     @OneToMany (fetch = FetchType.EAGER)
     private Set<CustomerReviewEntity> customerreviewEntities;
-
     public Set<CustomerReviewEntity> getCustomerreviewEntities() {
         return customerreviewEntities;
     }
-
     public void setCustomerreviewEntities(Set<CustomerReviewEntity> customerreviewEntities) {
         this.customerreviewEntities = customerreviewEntities;
     }
-
 
 
     public Long getId_customer() {
@@ -144,5 +141,4 @@ public class CustomerEntity {
     public void setIs_active(Boolean is_active) {
         this.is_active = is_active;
     }
-
 }
