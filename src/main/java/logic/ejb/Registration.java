@@ -1,6 +1,7 @@
 package logic.ejb;
 
-import logic.domain.UserEntity;
+import logic.domain.CustomerEntity;
+import logic.ejb.Authentication;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
@@ -15,13 +16,12 @@ public class Registration implements Serializable{
 
     private String login;
     private String password;
-    private String email;
 
     private boolean loginSuccess;
     private boolean createSuccess;
 
     @EJB
-    private RegistrationBean registrationBean;
+    private Authentication registrationBean;
 
     public String getLogin() {
         return login;
@@ -38,10 +38,6 @@ public class Registration implements Serializable{
     public void setPassword(String password) {
         this.password = password;
     }
-
-    public String getEmail() { return email; }
-
-    public void setEmail(String email) { this.email = email; }
 
     public boolean isLoginSuccess() {
         return loginSuccess;
@@ -60,14 +56,14 @@ public class Registration implements Serializable{
     }
 
     public void checkPassword(){
-        loginSuccess = registrationBean.checkPassword(login, password, email);
+        loginSuccess = registrationBean.checkPassword(login, password);
     }
 
     public void createUser(){
-        createSuccess = registrationBean.createUser(login, password, email);
+        createSuccess = registrationBean.createUser(login, password);
     }
 
-    public List<UserEntity> getAllUsers(){
+    public List<CustomerEntity> getAllUsers(){
         return registrationBean.getAllUsers();
     }
 }
