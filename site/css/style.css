@@ -8,7 +8,7 @@ footer, header,
 menu, nav, section, audio, video {
   margin: 0;
   padding: 0;
-  border: 0;
+  border: none;
   font-size: 100%;
   outline: none;
   box-sizing: border-box;
@@ -37,6 +37,7 @@ a {
   text-decoration: none;
   background-color: transparent;
   color: #66bc8d;
+  font-weight: 600;
 }
 
 
@@ -142,12 +143,6 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
 textarea {
   overflow: auto;
 }
@@ -157,22 +152,31 @@ textarea {
 }
 
   h1 {
-    font-size: 32px;
+    font-size: 42px;
+    font-weight: 500;
     line-height: 1.2;
   }
   h2 {
-    font-size: 24px;
+    font-size: 32px;
+    font-weight: 600;
     line-height: 1.3;
   }
   h3 {
-    font-size: 20px;
+    font-size: 26px;
+    font-weight: 600;
     line-height: 1.4;
   }
   p {
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 400;
     line-height: 1.5;
-  } 
+  }
 
+@media (max-width: 480px) { 
+  h1 {
+    font-size: 26px;
+  }
+}
 .container {  
   margin-right: auto;
   margin-left: auto;
@@ -469,7 +473,7 @@ input[type="radio"] {
     background-size: cover;
 }
 .change-profile h2 {
-    font-size: 32px;
+    font-size: 32px; 
     font-weight: 600;
     color: #427a5b;
     padding-bottom: 30px;
