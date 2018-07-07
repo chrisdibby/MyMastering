@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MyMastering</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style-index.css">
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:400,400i,500,600&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="icon" type="image/png" href="img/logo-simple.png" />
+	<link rel="stylesheet" media="all" href="css/animate.css">
+	<script src="js/wow.min.js"></script>
+	<script>new WOW().init();</script>
+	<style type="text/css">
+		 object { 
+		 	src: url('https://fonts.googleapis.com/css?family=Exo+2:400,400i,500,600&amp;subset=cyrillic') format("embedded-opentype");
+		 	margin-right: 30px;
+		 	cursor: pointer;
+		 }
+	</style>
+</head>
+
+<body lang="ru">
+		<!--Header-->
+		<div id="navbar" class="container-header index">
+			<div class="container">
+				<div class="col-md-7">
+					<object type="image/svg+xml" class="logo-simple" data="img/logo-simple.svg" width="100">
+					  <img src="img/logo-simple.png" class="logo-simple" width="100" alt="image format png" />
+					</object>
+					<div class="logo-text">
+						<strong>MyMastering</strong>
+						<p>Портал №1 по поиску исполнителя</p>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="account">
+						<a href="#login"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48"><path d="M42 6.02H6c-2.21 0-4 1.79-4 4V18h4V9.98h36v28.06H6V30H2v8.02c0 2.21 1.79 3.96 4 3.96h36c2.21 0 4-1.76 4-3.96v-28c0-2.21-1.79-4-4-4zM22 32l8-8-8-8v6H2v4h20v6z" fill='#66bc8d'/></svg></a>
+						<a href="#signup"><span>Регистрация</span></a>
+						<a href="#signup"><svg xmlns="http://www.w3.org/2000/svg" class="sign-icon" width="34" height="34" viewBox="0 0 48 48"><path d="M35.27 11.69C34.54 10.67 33.35 10 32 10l-22 .02c-2.21 0-4 1.77-4 3.98v20c0 2.21 1.79 3.98 4 3.98L32 38c1.35 0 2.54-.67 3.27-1.69L44 24l-8.73-12.31z" fill='#66bc8d'/></svg></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Modal window-->
+			<div id="login">
+				<div class="modal_window">
+					<div class="close"><a href="#">	<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48"><path d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z" fill='#767875'/></svg></a></div>
+					<div class="caption"><h1>Авторизация</h1></div>
+					<form action="" method="post" id="authorization" name="authorization">
+				            <input type="hidden" name="" value="">
+				            <div class="col-md-12">
+					             <label>E-mail*</label>
+					             <input type="email" name="email" placeholder="Ваш Email">
+					             <label>Пароль*</label>
+					             <input type="password" name="password" minlength="8" placeholder="Ваш пароль">
+					             <a class="reset" href="#reset">Забыли пароль?</a>
+					             <input type="checkbox" id="remember" name="remember" checked>Запомнить меня
+					             <a href="login.html" class="btn green">Войти</a>
+					             <a class="signup" href="#signup">Еще не зарегистрированы?</a>	             
+					        </div>
+					</form>
+				</div>
+			</div>
+			<div id="signup">
+				<div class="modal_window">
+					<div class="close"><a href="#">	<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48"><path d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z" fill='#767875'/></svg></a></div>
+					<div class="caption"><h1>Регистрация</h1></div>
+					<form action="" method="post" id="registration" name="registration">
+				            <input type="hidden" name="" value="">
+				            <div class="col-md-12">
+					             <label>E-mail*</label>
+					             <input type="email" name="email" placeholder="Ваш Email">
+					             <label>Пароль*</label>
+					             <input type="password" name="password" minlength="8" placeholder="Ваш пароль">
+					             <p class="error">Не менее 8 символов. Используйте прописные и строчные буквы, цифры.</p>
+					             <label>Повторите пароль*</label>
+					             <input type="password" name="password" minlength="8" placeholder="Повторите пароль">
+					             <figure>
+					             	<span class="radio"><input type="radio" id="master" name="radioProfile" value="master">
+					             	<label for="master">Исполнитель</label></span>
+					             	<span class="radio"><input type="radio" id="customer" name="radioProfile" value="customer" checked>
+					             	<label for="customer">Заказчик</label></span>
+					             </figure>
+					             <a href="login.html" class="btn green">Зарегистрироваться</a>
+					             <span>Уже зарегистрированы?</span><a class="login" href="#login">Войдите</a>	             
+					        </div>
+					</form>
+				</div>
+			</div>
+
+		<!--Content-->
+		<section id="content" class="head">
+        		<div class="container">
+					<div class="col-md-12 title">
+						<h1>Выберите лучшего мастера<br>прямо сейчас</h1>
+						<img src="img/index/arrow-left.png" class="left">
+						<img src="img/index/arrow-right.png" class="right">
+	        			<div class="center">
+	        				<a href="masters.html" class="btn green">Выбрать мастера</a>
+	        			</div>
+	        		</div>
+	        		<div id="backgr"></div>
+				</div>
+        </section>
+
+		<section class="change-profile">
+			<div class="container">
+        		<div class="col-md-12">
+        			<div class="center">
+	        			<h2>Ищете заказы? Станьше исполнителем!</h2>
+	        			<p>Более 800 000 заказчиков ищут своего мастера</p>
+	        			<a href="sign-master.html" class="btn green">Опубликовать свою услугу</a>
+	        		</div>
+        		</div>
+        	</div>
+        </section>
+
+        <section class="popular-categories">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="center"> 
+					 	<h2>Популярные категории</h2>
+        			</div> 
+        		</div>
+        		<div class="col-md-4">
+					<div class="card">
+						<a href="categories.html">
+							<img src="img/index/card-1.png" alt="Ремонт по дому">
+							<span>Ремонт по дому</span>
+						</a>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+
+		<section class="contacts">
+			<div class="container">
+        		<div class="col-md-12">
+        			<div class="center">
+	        			<h2>Остались вопросы? Мы будем рады Вам помочь!</h2>
+	        			<fieldset>
+	        				<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M13.25 21.59c2.88 5.66 7.51 10.29 13.18 13.17l4.4-4.41c.55-.55 1.34-.71 2.03-.49C35.1 30.6 37.51 31 40 31c1.11 0 2 .89 2 2v7c0 1.11-.89 2-2 2C21.22 42 6 26.78 6 8c0-1.11.9-2 2-2h7c1.11 0 2 .89 2 2 0 2.49.4 4.9 1.14 7.14.22.69.06 1.48-.49 2.03l-4.4 4.42z" fill='#565555'/></svg>
+	        				<h3>Звоните нам:</h3><a href="tel:+795432633">+7965 43 26 33</a>
+	        				<p> Время работы: с 9.00 до 18.00. </p>
+	        			</fieldset>
+	        			<fieldset>
+	        				<svg width="48" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M40 8H8c-2.21 0-3.98 1.79-3.98 4L4 36c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V12c0-2.21-1.79-4-4-4zm0 28H8V16l16 10 16-10v20zM24 22L8 12h32L24 22z" fill='#565555'/></svg>	
+	        				<h3>Пишите нам:</h3><a href="mailto:support@mymastering.ru">support@mymastering.ru</a>
+	        			</fieldset>
+	        		</div>
+        		</div>
+        	</div>
+        </section>
+
+        <!--Footer-->
+		<footer class="container-footer"> 
+		  	<div class="container">
+		  		<div class="col-md-12">
+					<div class="social">
+							<span>Присоединяйтесь к нам:</span>
+							<span>
+								<a href="https://www.facebook.com/mymastering/"><object type="image/svg+xml" data="img/social/fb.svg" width="32" ><img src="img/social/fb.png" alt="Facebook"/></object></a>
+								<a href="https://www.twitter.com/mymastering/"><object type="image/svg+xml" data="img/social/tw.svg" width="32" ><img src="img/social/tw.png" alt="Twitter"/></object></a>
+								<a href="https://www.youtube.com/mymastering/"><object type="image/svg+xml" data="img/social/yt.svg" width="32" ><img src="img/social/yt.png" alt="Youtube"/></object></a>
+								<a href="https://www.instagram.com/mymastering/"><object type="image/svg+xml" data="img/social/in.svg" width="32" ><img src="img/social/in.png" alt="Instagram"/></object></a>
+							</span>
+					</div>
+        		</div>
+		    	<div class="row">
+					<div class="col-md-3">
+						<a href="index.html">
+							<object type="image/svg+xml" class="logo" data="img/logo.svg" width="80" align="right">
+							  <img src="img/logo.png" class="logo" alt="image format png" />
+							</object>
+						</a>
+					</div>
+		     
+			    	<div class="col-md-3">
+						<ul class="main">
+			    				<li><a href="how_work.html">Как работает Mymastering</a></li>
+			    				<li><a href="customer.html">Заказчикам</a></li>
+				                <li><a href="master.html">Исполнителям</a></li>
+			      		</ul>
+					</div>
+				     
+				    <div class="col-md-3">
+						<ul class="info">
+						        <li><a href="prices.html">Цены и услуги</a></li>
+						        <li><a href="subscribe.html">Подписка</a></li>
+						        <li><a href="privacy_policy.html">Политика конфиденциальности</a></li>
+				      	</ul>
+					</div>
+
+					<div class="col-md-3">
+						<ul class="contact">
+						        <li><a href="help.html">Помощь</a></li>
+						        <li><a href="faq.html">Частые вопросы</a></li>
+						        <li><a href="contacts.html">Контакты</a></li>
+				        </ul>
+					</div>
+			   	</div>
+			    <div class="copyright">
+			        <p>Copyright © 2018 A-Stock</p>
+			    </div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
