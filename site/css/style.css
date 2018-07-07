@@ -174,7 +174,16 @@ textarea {
 
 @media (max-width: 480px) { 
   h1 {
-    font-size: 26px;
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
   }
 }
 .container {  
@@ -208,14 +217,12 @@ textarea {
 }
 .container-header strong {
     position: relative;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 500;
     color: #427a5b;
     bottom: 10px;
 }
 .container-header p {
-    font-size: 20px;
-    font-weight: 400;
     color: #575656;   
 }
 
@@ -231,9 +238,6 @@ textarea {
 @media (max-width: 480px) {  
   .container-header strong {
     font-size: 18px;
-  }
-  .container-header p {
-    font-size: 16px;
   }
   .logo-simple {
     width: 60px;
@@ -400,7 +404,6 @@ input[type="radio"] {
     transition: 0.2s all linear;
     cursor: pointer;
     outline: none;
-
     margin-right: 10px;
 }
 
@@ -421,9 +424,7 @@ input[type="radio"] {
     box-shadow: 0 3px 30px 0px rgba(0,0,0,0.07);
 }
 
-.sign-up h1 {
-    font-size: 32px;
-    font-weight: 600;
+.sign-up h2 {
     color: #fff;
     background: #767875;
     padding: 40px 20px 20px 40px;
@@ -431,9 +432,7 @@ input[type="radio"] {
 .sign-up form {
     padding: 20px 40px;
 }
-.sign-up h2 {
-    font-size: 26px;
-    font-weight: 600;
+.sign-up h3 {
     color: #403f3f;
     padding: 80px 20px 20px 0px;
 }
@@ -449,12 +448,10 @@ input[type="radio"] {
   }
 
 @media (max-width: 480px) {
-  .sign-up h1 {
-      font-size: 26px;
+  .sign-up h2 {
       padding: 20px;
   }
-  .sign-up h2 {
-      font-size: 20px;
+  .sign-up h3 {
       padding: 40px 20px 10px 0px;
   }
   .sign-up form {
@@ -468,37 +465,34 @@ input[type="radio"] {
 /* Change Profile */
 .change-profile {
     position: relative;
-    padding: 100px 40px 40px;
+    padding: 60px 40px 10px;
     background:  url(../img/pattern-min.png) no-repeat center;
     background-size: cover;
 }
 .change-profile h2 {
-    font-size: 32px; 
-    font-weight: 600;
     color: #427a5b;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 .change-profile p {
-    font-size: 24px;
-    font-weight: 400;
+	font-size: 24px;
+	font-weight: 300;
     color: #403f3f;
     padding-right: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .change-profile .btn.green {
     margin-right: 0;
 }
-
-@media (max-width: 480px) {  
+@media (max-width: 992px) {  
   .change-profile {
-    padding: 60px 20px 20px;
+    padding: 60px 20px 10px;
+	text-align: center;
   }
-  .change-profile h2 {
-    font-size: 20px;
-  }
+}
+@media (max-width: 480px) {  
   .change-profile p {
-    font-size: 16px;
+	font-size: 16px;
   }
 }
 
@@ -532,6 +526,11 @@ input[type="radio"] {
 .social img {
     margin-right: 30px;
 }
+
+.copyright p {
+	font-size: 16px;
+}
+
   .container-footer .row { 
     color: #565555;
     display: block;
@@ -539,6 +538,7 @@ input[type="radio"] {
   }
   .container-footer .row a { 
     color: #565555;
+		font-weight: 400;
   }
   .container-footer .row a:hover {
     color: #66bc8d;
