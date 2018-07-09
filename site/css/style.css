@@ -315,6 +315,23 @@ textarea {
     background: #4b8b67;
 }
 
+.btn.brown-contour {
+    color: #565555;
+    background: none;
+    border: 3px solid #565555;
+    margin-bottom: 60px;
+}
+.btn.brown-contour:active {
+    color: #fff;
+    background: #403f3f;
+    border: none;
+}
+@media (max-width: 480px) {
+  .btn.brown-contour {
+    border-width: 2px;
+  }
+}
+
 /* Forms */
 
 form {  
