@@ -80,7 +80,7 @@
       .modal_window form span {
           padding-right: 10px;
       }
-      .modal_window form figure {
+      .modal_window form .figure {
           margin: 20px 0;
       }
       .modal_window form .radio {

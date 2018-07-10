@@ -5,7 +5,7 @@ a, img, ol, ul, li,
 fieldset, form, label,
 table, caption, tbody, tfoot, thead, tr, th, td,
 footer, header,
-menu, nav, section, audio, video {
+menu, nav, audio, video {
   margin: 0;
   padding: 0;
   border: none;
@@ -15,7 +15,7 @@ menu, nav, section, audio, video {
   color: inherit;
 }
 
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav {
   display: block;
 }
 
@@ -186,6 +186,15 @@ textarea {
     font-size: 16px;
   }
 }
+
+.figure {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em; 
+  -webkit-margin-start: 40px;
+  -webkit-margin-end: 40px;
+}
+
 .container {  
   margin-right: auto;
   margin-left: auto;
@@ -453,14 +462,14 @@ input[type="radio"] {
     color: #403f3f;
     padding: 80px 20px 20px 0px;
 }
-  .sign-up figure {
+  .sign-up .figure {
     margin: 40px 0 20px 0;
   }
-  .sign-up figcaption {
+  .sign-up .figcaption {
      border-bottom: 4px dotted #b4cd93;
      margin: 15px 40px 15px 0;
   }
-  .sign-up figure > div > div {
+  .sign-up .figure > div > div {
     padding-top: 20px;
   }
 
@@ -474,7 +483,7 @@ input[type="radio"] {
   .sign-up form {
       padding: 10px 20px 40px;
     }
-  .sign-up figcaption {
+  .sign-up .figcaption {
      margin: 15px 0;
   }
 }
