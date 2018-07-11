@@ -78,6 +78,190 @@
     margin-top: 4%;
 }
 
+/* About & Review*/
+
+.about, .review {
+    position: relative;
+    padding: 120px 20px;
+    background:  #fff;
+    display: block;
+    overflow: hidden;
+}
+
+hr {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #d1edab;
+  border: 0;
+  overflow: visible;
+}
+
+hr.vert-line {
+  margin-right: 40px;
+  height: 100px;
+  width: 5px;
+  left: -45px;
+  bottom: -45px;
+}
+
+hr.hor-line {
+  margin-top: 35px;
+  height: 5px;
+  width: 100px;
+  left: -45px;
+}
+
+.corner {
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    right: 0;
+    bottom: 0px;
+    border-top: 120vw solid transparent;
+    border-right: 60vw solid #e4eccc;
+   /* background: linear-gradient(to bottom, #fefad9, #e4eccc); */
+   overflow: hidden;
+    z-index: 0;
+}
+
+.about .content-center, .review .content-center{
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.about p {
+  font-size: 24px;
+  color: #403f3f;
+}
+
+.about img {
+  position: relative;
+  display: block;
+  margin-left: 5vw;
+  margin-bottom: -150px;
+}
+@media (min-width: 480px) and (max-width: 992px) {
+  .about img {
+    margin-left: 40vw;
+  }
+}
+
+@media (max-width: 480px) {  
+  .about p {
+    font-size: 18px;
+  }
+}
+
+/* Review */
+
+.review-caption {
+  position: relative;
+  display: block;
+  z-index: 1;
+  background: #fff;
+}
+
+.review-caption h2 {
+    color: #403f3f;
+    padding-bottom: 70px;
+}
+
+.review p {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  color: #403f3f;
+  padding-bottom: 40px;
+}
+
+.review span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #767875;
+  margin-top: 50px;
+}
+
+.review svg {
+  position: relative;
+  left: -20px;
+  margin-bottom: 20px;
+  width: 120px;
+}
+
+.review img.stars {
+  position: absolute;
+  display: inline;
+  bottom: 0;
+  right: 0;
+}
+
+.review img.photo {
+  position: relative;
+  display: block;
+  margin-left: 5vw;
+  margin-bottom: -35px;
+}
+
+@media (max-width: 992px) {
+  .review img.photo  {
+    margin-left: 40vw;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .review p {
+    font-size: 16px;
+  }
+  .review span {
+    font-size: 14px;
+  }
+  .review img.photo  {
+    width: 50%;
+  }
+  .review img.stars  {
+    width: 40%;
+  }
+}
+
+/* Advantages */
+
+.advantages {
+    position: relative;
+    padding: 180px 20px 150px;
+    background:  #fff;
+}
+
+.advantages h2 {
+    color: #403f3f;
+    padding-bottom: 100px;
+}
+
+.advantages img {
+  position: relative;
+  display: inline-block;
+  margin: auto 20px;
+  vertical-align: bottom;
+}
+
+.advantages span {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #403f3f;
+  padding: 40px 10px;
+  text-align: center;
+}
+
+.advantages p {
+  color: #403f3f;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
 /* Popular categories */
 
 .popular-categories {
