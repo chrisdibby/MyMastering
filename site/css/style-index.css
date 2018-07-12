@@ -36,7 +36,6 @@
 .head h1 {
     color: #565555;
     background: url(../img/index/title.png) no-repeat center;
-	/*background-size: contain;*/
     text-align: center;
     padding: 80px 20px 60px;
 }
@@ -82,10 +81,17 @@
 
 .about, .review {
     position: relative;
-    padding: 120px 20px;
     background:  #fff;
     display: block;
     overflow: hidden;
+}
+
+.about {
+  padding: 120px 20px;
+}
+
+.review {
+  padding: 60px 20px 120px;
 }
 
 hr {
@@ -166,7 +172,7 @@ hr.hor-line {
 
 .review-caption h2 {
     color: #403f3f;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
 }
 
 .review p {
@@ -206,6 +212,9 @@ hr.hor-line {
 }
 
 @media (max-width: 992px) {
+  .review {
+    padding: 0 20px 60px;
+  }
   .review img.photo  {
     margin-left: 40vw;
     margin-top: 40px;
@@ -227,6 +236,159 @@ hr.hor-line {
   }
 }
 
+/* Categories*/
+
+.order {
+    position: relative;
+    padding: 180px 20px 150px;
+    background:  #fff;
+}
+
+.order h2 {
+    color: #403f3f;
+    padding-bottom: 10px;
+}
+.order h3 {
+    font-weight: 600;
+    color: #403f3f;
+}
+
+.order p {
+    line-height: 1.3;
+    margin: 0 40px 40px 100px;
+}
+
+.order span {
+  position: relative;
+  display: block;
+  font-size: 32px;
+  font-weight: 600;
+  color: #96aa7b;
+  padding: 20px;
+  background: url(../img/index/blot-line.png) no-repeat center;
+  margin-bottom: 100px;
+}
+
+.order div.number {
+    display: block;
+    font-size: 48px;
+    font-weight: 600;
+    color: #b4cd93;
+    background: url(../img/index/blot.png) no-repeat center;
+    background-size: contain;
+    padding: 5px;
+    text-align: center;
+    width: 75px;
+    border: 4px solid #b4cd93;
+    border-radius: 4px;
+    margin-right: 40px;
+    float: left;
+}
+
+  .order .figure {
+    margin: 0px 20px 40px 20px;
+  }
+  .order .figcaption {
+     border-bottom: 4px dotted #b4cd93;
+     margin: 15px 50px 15px 100px;
+  }
+
+.order img {
+    
+}
+@media (max-width: 992px) {  
+  .order img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+  }
+}
+
+.order h2.master-steps {
+  padding-top: 120px;
+}
+
+.order span.master-steps {
+  background: none;
+  margin-bottom: 60px;
+}
+
+/* Categories*/
+
+.categories {
+    position: relative;
+    padding: 120px 40px 60px;
+    background:  url(../img/pattern.png) no-repeat center;
+    background-size: cover;
+}
+
+.categories h2 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #427a5b;
+    padding-bottom: 30px;
+}
+
+.categories p.category {
+    font-size: 24px;
+    font-weight: 400;
+    color: #403f3f;
+    margin-bottom: 40px;
+}
+
+.categories .col-md-3 {
+    vertical-align: top;
+}
+
+.categories .name-category {
+    margin: 40px 20px;
+    padding-left: 50px;
+    vertical-align: top;
+}
+
+.categories p {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #403f3f;
+    line-height: 1.3;
+    white-space: pre-line;
+    vertical-align: middle;
+}
+
+.categories img {
+    display: inline;
+    float: left;
+}
+
+.categories a {
+    display: block;
+}
+
+@media (max-width: 992px) {  
+  .categories {
+    padding: 60px 20px 30px;
+  }
+  .categories .col-md-3 {
+    text-align: center;
+  }
+  .categories .name-category {
+    padding-left: 30px;
+  }
+  .categories img {
+    height: 40px;
+    float: left;
+  }
+}
+@media (max-width: 480px) {  
+  .categories h2 {
+    font-size: 32px;
+  }
+
+}
+
 /* Advantages */
 
 .advantages {
@@ -240,26 +402,53 @@ hr.hor-line {
     padding-bottom: 100px;
 }
 
+.advantages .col-md-3 {
+    vertical-align: top;
+}
+
+.advantages .advantage-img {
+  height: 170px;
+  vertical-align: middle;
+}
+
 .advantages img {
   position: relative;
-  display: inline-block;
-  margin: auto 20px;
-  vertical-align: bottom;
+  display: block;
+  margin: 0 auto;
+  padding-right: 15px;
+}
+
+.advantages .advantage {
+    padding: 0 10px;
 }
 
 .advantages span {
-  display: inline-block;
-  font-size: 24px;
+  position: relative;
+  display: block;
+  font-size: 22px;
   font-weight: 600;
   color: #403f3f;
-  padding: 40px 10px;
+  padding: 40px 0 30px;
   text-align: center;
+  vertical-align: top;
 }
 
 .advantages p {
+  font-size: 18px;
+  line-height: 1.3;
+  position: relative;
+  display: block;
   color: #403f3f;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   text-align: center;
+  vertical-align: top;
+}
+
+@media (max-width: 480px) { 
+  .advantages span {
+    font-size: 20px;
+    padding: 30px 0 20px 0;
+  }
 }
 
 /* Popular categories */
