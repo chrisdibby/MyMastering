@@ -250,6 +250,7 @@ hr.hor-line {
 }
 .order h3 {
     font-weight: 600;
+    line-height: 1.2;
     color: #403f3f;
 }
 
@@ -281,29 +282,22 @@ hr.hor-line {
     width: 75px;
     border: 4px solid #b4cd93;
     border-radius: 4px;
-    margin-right: 40px;
+    margin-right: 43px;
     float: left;
 }
 
-  .order .figure {
+.order .figure {
     margin: 0px 20px 40px 20px;
-  }
-  .order .figcaption {
-     border-bottom: 4px dotted #b4cd93;
-     margin: 15px 50px 15px 100px;
-  }
+}
+.order .figcaption {
+    border-bottom: 4px dotted #b4cd93;
+    margin: 15px 50px 15px 100px;
+}
 
 .order img {
-    
-}
-@media (max-width: 992px) {  
-  .order img {
     position: relative;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 80px;
-  }
+    margin-top: 40px;
 }
 
 .order h2.master-steps {
@@ -314,6 +308,57 @@ hr.hor-line {
   background: none;
   margin-bottom: 60px;
 }
+
+@media (max-width: 992px) {  
+  .order img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+  }
+  .order div.number {
+    font-size: 32px;
+    width: 47px;
+    border: 3px solid #b4cd93;
+    margin-right: 30px;
+  }
+  .order .figcaption {
+    margin-left: 60px;
+  }
+  .order p {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 480px) {  
+  .order {
+    position: relative;
+    padding: 90px 20px 70px;
+  }
+  .order span {
+    font-size: 22px;
+    margin-bottom: 50px;
+  }
+  .order div.number {
+    margin-right: 15px;
+  }
+  .order .figure {
+    margin-right: 0;
+  }
+  .order .figcaption {
+    margin: 15px 0 15px 43px;
+  }
+  .order p {
+    margin: 0 0 40px 43px;
+  }
+  .order h2.master-steps {
+    padding-top: 60px;
+  }
+  .order span.master-steps {
+    margin-bottom: 30px;
+  }
+}
+
+
 
 /* Categories*/
 
@@ -564,7 +609,7 @@ hr.hor-line {
 
 @media (max-width: 480px) {  
   .contacts {
-    padding: 60px 20px 20px;
+    padding: 60px 20px 40px;
   }
   .contacts svg {
     width: 32px;
