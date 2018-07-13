@@ -171,8 +171,8 @@ hr.hor-line {
 }
 
 .review-caption h2 {
-    color: #403f3f;
-    padding-bottom: 50px;
+  color: #403f3f;
+  padding-bottom: 50px;
 }
 
 .review p {
@@ -222,6 +222,9 @@ hr.hor-line {
 }
 
 @media (max-width: 480px) {
+  .review-caption h2 {
+    padding-bottom: 20px;
+  }
   .review p {
     font-size: 16px;
   }
@@ -265,9 +268,9 @@ hr.hor-line {
   font-size: 32px;
   font-weight: 600;
   color: #96aa7b;
-  padding: 20px;
+  padding: 10px 20px 20px;
   background: url(../img/index/blot-line.png) no-repeat center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .order div.number {
@@ -380,7 +383,7 @@ hr.hor-line {
     font-size: 24px;
     font-weight: 400;
     color: #403f3f;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .categories .col-md-3 {
@@ -404,7 +407,8 @@ hr.hor-line {
 }
 
 .categories img {
-    display: inline;
+    position: absolute;
+    display: block;
     float: left;
 }
 
@@ -424,14 +428,20 @@ hr.hor-line {
   }
   .categories img {
     height: 40px;
-    float: left;
   }
 }
 @media (max-width: 480px) {  
   .categories h2 {
     font-size: 32px;
   }
-
+  .categories p.category {
+    font-size: 16px;
+  }
+}
+@media (min-width: 481px) and (max-width: 991px) {  
+  .categories img {
+    padding-left: 10%;
+  }
 }
 
 /* Advantages */
@@ -444,7 +454,7 @@ hr.hor-line {
 
 .advantages h2 {
     color: #403f3f;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
 }
 
 .advantages .col-md-3 {
@@ -473,7 +483,7 @@ hr.hor-line {
   font-size: 22px;
   font-weight: 600;
   color: #403f3f;
-  padding: 40px 0 30px;
+  padding: 40px 0 20px;
   text-align: center;
   vertical-align: top;
 }
@@ -484,9 +494,15 @@ hr.hor-line {
   position: relative;
   display: block;
   color: #403f3f;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
   text-align: center;
   vertical-align: top;
+}
+
+@media (max-width: 991px) { 
+  .advantages .advantage-img {
+    height: inherit;
+  }
 }
 
 @media (max-width: 480px) { 
@@ -559,7 +575,7 @@ hr.hor-line {
       width: 100%;
   }
   .popular-categories {
-    padding: 90px 20px 60px;
+    padding: 120px 20px 60px;
   }
   .popular-categories h2 {
     padding-bottom: 60px;
@@ -609,7 +625,7 @@ hr.hor-line {
 
 @media (max-width: 480px) {  
   .contacts {
-    padding: 60px 20px 40px;
+    padding: 60px 20px;
   }
   .contacts svg {
     width: 32px;
