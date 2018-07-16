@@ -8,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Exo+2:400,400i,500,600&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="icon" type="image/png" href="img/logo-simple.png" />
+	<script type="text/javascript" src="js/pic_download.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 
 <body lang="ru">
@@ -37,7 +39,7 @@
         		<div class="container">
         				<div class="registration">
         					<h2>Добро пожаловать в MyMastering!</h2>
-					        <form action="" enctype="multipart/form-data" method="post" id="registr" name="registr" autocomplete="on">
+					        <form action="http://185.66.69.192/" enctype="multipart/form-data" method="post" id="registr" name="registr" autocomplete="on">
 					        	<h3>Заполните данные для входа в качестве исполнителя</h3>
 					        	<div class="figure">
 					        		<p class="section">1. Личные данные</p>
@@ -61,7 +63,7 @@
 										<label for="zip">Индекс</label>
 										<input id="zip" name="zip" type="text" pattern="[0-9]{6}" placeholder="Ваш индекс" maxlength="6">
 						            </div>
-						            <div class="col-md-5">
+						            <div class="col-md-5 last">
 										<label for="region">Регион</label>
 										<input id="region" name="region" type="text" placeholder="Ваша область, район" maxlength="80">
 						            </div>
@@ -73,7 +75,7 @@
 						        </div>
 					        	<div class="figure">
 					        		<p class="section">2. Данные о работе</p>
-						            <div class="col-md-6">
+						            <div class="col-md-5">
 										<label for="sphere">Категория (сфера выполняемой работы)*</label>
 										<select id="sphere" name="sphere">
 											<option value="select-sphere">Строительство дома</option>
@@ -96,7 +98,7 @@
 						            </div>
 						            <div class="col-md-6">
 						            </div>
-						            <div class="col-md-4">
+						            <div class="col-md-4 radio">
 						            	<label for="legal-form">Правовая форма*</label>
 						            	<div class="radio-group">
 							             	<span class="radio"><input type="radio" id="individual" name="legal-form" value="master">
@@ -118,23 +120,55 @@
 										<label for="name-company">Наименование организации*</label>
 										<input id="name-company" name="name-company" type="text" placeholder="Ваша организация" maxlength="40">
 						            </div>
-						            <p class="add-section">Дополнительные данные</p>
-						            <div class="col-md-4">
-										<label for="inn">ИНН/УНП</label>
-										<input id="inn" name="inn" type="number" placeholder="ИНН/УНП организации" minlength="9" maxlength="12">
-						            </div>
-						            <div class="col-md-4">
-										<label for="bic">БИК</label>
-										<input id="bic" name="bic" type="number" placeholder="БИК организации" length="9">
-						            </div>
-						            <div class="col-md-6">
-										<label for="adress_fact">Адрес организации (фактический)</label>
-										<input id="adress_fact" name="adress_fact" type="text" placeholder="Адрес организации" maxlength="80">
-						            </div>
-						            <div class="col-md-6">
-										<label for="adress_legal">Адрес организации (юридический)</label>
-										<input id="adress_legal" name="adress_legal" type="text" placeholder="Адрес организации юридический" maxlength="80">
-						            </div>
+						            <p class="add-section">Дополнительные данные
+							            <svg class="on" width="16" height="9">
+										    <polygon points="0,0 8,9 16,0"
+										             fill="#565555"  />
+										</svg>
+							            <svg class="off" width="16" height="9">
+										    <polygon points="0,9 8,0 16,9"
+										             fill="#565555"  />
+										</svg>
+									</p>
+						            <div class="hide">
+							            <div class="col-md-4">
+											<label for="inn">ИНН/УНП</label>
+											<input id="inn" name="inn" type="text" pattern="[0-9]{9,12}" placeholder="ИНН/УНП организации" minlength="9" maxlength="12">
+							            </div>
+							            <div class="col-md-4">
+											<label for="bic">БИК</label>
+											<input id="bic" name="bic" type="text" pattern="[0-9]{9}" placeholder="БИК организации" minlength="9" maxlength="9">
+							            </div>
+							            <div class="col-md-6">
+											<label for="adress_fact">Адрес организации (фактический)</label>
+											<input id="adress_fact" name="adress_fact" type="text" placeholder="Адрес организации" maxlength="80">
+							            </div>
+							            <div class="col-md-6 check">
+											<label for="adress_legal">Адрес организации (юридический)</label>
+											<input id="adress_legal" name="adress_legal" type="text" placeholder="Адрес организации юридический" maxlength="80">
+											<div class="checkbox_fact"><input type="checkbox" name="fact" > <span>совпадает с фактическим</span></div>
+							            </div>
+							            <div class="col-md-5 load">
+							            	<label>Лицензия и сертификаты качества</label>
+										 	<object>
+										 	<form method="post" enctype="multipart/form-data" id="uploadImages">
+										 		<div class="upload">
+													<label for="addImages" >Загрузите файлы...</label>
+				    								<input required="required" accept="image" type="file" id="addImages" multiple="">
+				   										 <ul id="uploadImagesList">
+				    									    <li class="item template">
+				        									    <span class="img-wrap">
+				        									        <img src="image.jpg" alt="">
+				        									    </span>
+				        									    <span class="delete-link" title="Удалить"><img src="img/cancel.png"  alt="Закрыть"></span>
+				        									</li>
+				   										 </ul>
+				   								</div>
+				   							</form>
+				   							</object>
+							            </div>
+							        </div>
+
 						            <div class="figcaption"> </div>
 						        </div>
 						        <div class="figure">
@@ -143,10 +177,8 @@
 										<label for="phone">Мобильный телефон*</label>
 										<input id="phone" name="phone" type="text" placeholder="Ваш телефон" maxlength="20">
 						            </div>
-						            <div class="col-md-12">
-						            	<div>
+						            <div class="col-md-12 check">
 						            		<input type="checkbox" name="agreement" checked> Я согласен с условиями <a href="privacy_policy.html">Пользовательского соглашения</a>
-						            	</div>
 						        	</div>
 						        </div>
 					        </form>
@@ -219,6 +251,8 @@
 			    </div>
 			</div>
 		</footer>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/pic_download.js"></script>
 </body>
 
 </html>

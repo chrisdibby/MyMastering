@@ -364,7 +364,6 @@ form select {
     border: 1px solid #d1d4d0;
     box-sizing: inherit;
     border-radius: 3px;
-    box-shadow: inset 0px 1px 3px rgba(0,0,0,.15);
 }
 form select option {
     font-size: 16px; 
@@ -381,13 +380,16 @@ form input {
     border-radius: 3px;
     box-shadow: inset 0px 1px 3px rgba(0,0,0,.15);
 }
-      input[type="text"],input[type="password"],input[type="email"],input[type="file"], .upload { 
-          width: 90%;
+      input[type="text"],input[type="number"],input[type="password"],input[type="email"],input[type="file"], .upload { 
+          width: 100%;
+      }
+      select {
+          width: 100%;
       }
       input[type="checkbox"] {
           color: #2f2e2e;
           background: #fff;
-          margin: 0 0 40px 0;
+          margin: 0 0 40px 5px;
           margin-right: 10px;
           height: 15px;
           width: 15px;
@@ -421,9 +423,6 @@ form input {
           font-size: 16px;
           margin: 0 0 20px 0;
         }
-        input[type="text"],input[type="password"],input[type="email"],input[type="file"], .upload { 
-          width: 100%;
-        }
       }
 
 input[type="radio"]:checked {
@@ -445,24 +444,6 @@ input[type="radio"] {
     margin-right: 10px;
 }
 
-      form .radio-group span {
-          padding-right: 10px;
-      }
-      form .radio-group .radio {
-          display: inline-flex;
-          vertical-align: top;
-          margin-right: 40px;
-          padding-bottom: 10px;
-      }
-      form .radio-group input[type="radio"] {
-          margin-top: 3px;
-      }
-
-form p.add-section {
-  font-size: 18px;
-  border-bottom: 2px dotted #403f3f;
-  margin: 20px 0 40px;
-}
 
 /* Registration */
 .sign-up {
@@ -490,6 +471,52 @@ form p.add-section {
 .sign-up form {
     padding: 20px 40px;
 }
+
+.sign-up form div {
+    padding-right: 20px;
+}
+
+.sign-up form div.radio {
+    padding-right: 0px;
+}
+
+.sign-up form .radio-group .radio {
+    display: inline-flex;
+    vertical-align: top;
+    margin-right: 40px;
+    padding-bottom: 10px;
+    padding-right: 0px;
+}
+.sign-up form .radio-group input[type="radio"] {
+    margin-top: 3px;
+}
+
+form p.add-section {
+  font-size: 18px;
+  border-bottom: 2px dashed #403f3f;
+  display: table;
+  margin: 20px 20px 40px 0;
+}
+form p .off {
+  display: none;
+}
+
+form .checkbox_fact {
+  position: absolute;
+  font-size: 16px;
+  margin-top: -20px;
+  margin-left: 10px;
+}
+
+form .check {
+  margin-bottom: 40px;
+}
+
+form .check input[type="checkbox"] {
+  margin-bottom: 0;
+
+}
+
 .sign-up h3 {
     color: #403f3f;
     padding: 80px 20px 20px 0px;
@@ -501,12 +528,21 @@ form p.add-section {
      border-bottom: 4px dotted #b4cd93;
      margin: 15px 40px 15px 0;
   }
-  .sign-up .figure > div > div {
+  .sign-up .figure > div.radio  > div{
     padding-top: 20px;
   }
 
-.sign-up  .figure .section {
+.sign-up .figure .section {
     margin: -10px 0 40px;
+}
+
+@media (max-width: 992px) {
+  .sign-up form div {
+      padding-right: 0px;
+  }
+  form .load {
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -523,6 +559,65 @@ form p.add-section {
      margin: 15px 0;
   }
 }
+
+.upload {
+    color: #ababab;
+    background: #fff;
+    padding: 15px;
+    margin: 0 0 30px 0;
+    border: 1px solid #d1d4d0;
+    border-radius: 3px;
+    box-shadow: inset 0px 1px 3px rgba(0,0,0,.15);
+    float: left;
+}
+.upload label {
+  margin-bottom: 0;
+}
+
+#addImages {
+  display: block;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: -1;
+}
+
+#uploadImagesList {
+        list-style: none;
+        padding: 0;
+        float: left;
+    }
+    #uploadImagesList .item {
+        float: left;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    #uploadImagesList .item .img-wrap {
+        display: block;
+        float: left;
+    }
+    #uploadImagesList .item .img-wrap img{
+        height: 110px;
+        background: rgba(209, 237, 171, 0.5);
+        padding: 20px 2px 2px;
+        border-radius: 2px;
+        z-index: 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    #uploadImagesList .delete-link {
+        cursor: pointer;
+        display: block;
+        float: right;
+        margin-top: 0px;
+        margin-left: -20px;
+        z-index: 1;
+
+    }
+    #uploadImagesList .delete-link img {
+        width: 70%;
+    }
 
 /* Change Profile */
 .change-profile {

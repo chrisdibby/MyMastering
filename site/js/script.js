@@ -31,3 +31,13 @@
  
         requestAnimationFrame(scrollLoop);
     }
+
+//add_section - sign-master
+    $('.hide').hide(); // hide the answer divs first
+    
+    $('.add-section').click(function() {
+        //alert( $(this).next('.hide').find('.ans_text').text() );
+        $('.hide').slideUp();
+        $(this).next('.hide').slideDown();
+
+    });
