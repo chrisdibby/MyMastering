@@ -653,6 +653,64 @@ form .check input[type="checkbox"] {
   }
 }
 
+/* Pre-Mail */
+.pre-mail {
+    position: relative;
+    padding: 100px 40px 50px;
+    background:  #f7f7f7;
+}
+.pre-mail h2 {
+    display: inline-block;
+    color: #427a5b;
+    
+}
+.pre-mail h3 {
+    color: #403f3f;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+.pre-mail p {
+    color: #403f3f;
+    padding-right: 10px;
+    margin-bottom: 80px;
+}
+.pre-mail span {
+    font-weight: 600;
+}
+.pre-mail svg {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+.pre-mail .col-md-5 {
+    text-align: center;
+    padding-right: 30px;
+    margin-bottom: 40px;
+    vertical-align: bottom;
+}
+.pre-mail hr {
+    opacity: 0.2;
+}
+.pre-mail a {
+    display: inline-flex;
+}
+@media (max-width: 1199px) { 
+  .pre-mail h2 {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 991px) {  
+  .pre-mail {
+    padding: 60px 20px 30px;
+    text-align: center;
+  }
+  .pre-mail svg {
+    display: none;
+  }
+}
+
 
 /* Footer */
 .container-footer { 
