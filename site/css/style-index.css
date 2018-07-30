@@ -309,7 +309,7 @@ hr.hor-line {
 
 .order span.master-steps {
   background: none;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 991px) {  
@@ -617,10 +617,6 @@ hr.hor-line {
     display: inline-flex;
     font-size: 26px;
     font-weight: 600;
-}
-
-.change-profile .btn.green {
-    margin-right: 0;
 }
 
 @media (max-width: 480px) {  

@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MyMastering</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/price.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:400,400i,500,600&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="icon" type="image/png" href="img/logo-simple.png" />
+	<script type="text/javascript" src="js/pic_download.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body lang="ru">
+		<!--Header-->
+		<div class="container-header">
+			<div class="container">
+				<div class="col-md-7">
+					<object type="image/svg+xml" class="logo-simple" data="img/logo-simple.svg" width="100">
+					  <img src="img/logo-simple.png" class="logo-simple" width="100" alt="image format png" />
+					</object>
+					<div class="logo-text">
+						<strong>MyMastering</strong>
+						<p>Портал №1 по поиску исполнителя</p>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="account">
+						<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48"><path d="M6 10v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4V10c0-2.21-1.79-4-4-4H10c-2.21 0-4 1.79-4 4zm24 8c0 3.32-2.69 6-6 6s-6-2.68-6-6c0-3.31 2.69-6 6-6s6 2.69 6 6zM12 34c0-4 8-6.2 12-6.2S36 30 36 34v2H12v-2z" fill='#66bc8d'/></svg>
+						<span>Татьяна</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Content-->
+		<div class="order-app">
+			<div class="steps">
+				<div class="col-md-12">
+					<div class="container">
+						<div class="step-1">
+							<div class="left">
+								<span>1</span>
+								<img src="img/app/step1.png">
+								<p>Заполнить <br>заявку</p>
+								<hr class="vert-line">
+								<hr class="hor-line">
+							</div>
+						</div>
+						<div class="figcaption"></div>
+						<div class="step-2">
+							<div class="left">
+								<span>2</span>
+								<img src="img/app/step2.png">
+								<p>Получите <br>предложения</p>
+								<hr class="vert-line">
+								<hr class="hor-line">
+							</div>
+						</div>
+						<div class="figcaption"></div>
+						<div class="step-3">
+							<div class="left">
+								<span>3</span>
+								<img src="img/app/step3.png">
+								<p>Выберите <br>исполнителя</p>
+								<hr class="vert-line">
+								<hr class="hor-line">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        		<div class="container">
+        				<div class="app">
+        					<div class="figcaption">
+					        <form action="" enctype="multipart/form-data" method="post" id="registr" name="registr" autocomplete="on">
+					        	<div class="figure">
+					        	<h3>Заполните заявку</h3>
+						            <div class="col-md-5">
+										<label for="sphere">Категория (сфера выполняемой работы)*</label>
+										<select id="sphere" name="sphere">
+											<option value="select-sphere">Строительство дома</option>
+											<option value="select-sphere">Внутренняя отделка дома</option>
+											<option value="select-sphere">Ландшафт и уход за участком</option>
+											<option value="select-sphere">Уборка и помощь по хозяйству</option>
+											<option value="select-sphere">Консультация и планирование</option>
+											<option value="select-sphere">Грузоперевозки</option>
+											<option value="select-sphere">Прокат транспорта</option>
+											<option value="select-sphere">Ремонт по дому</option>
+											<option value="select-sphere">Ремонт бытовой техники</option>
+											<option value="select-sphere">Фото- и видеосъемка</option>
+											<option value="select-sphere">Компьютерная помощь</option>
+											<option value="select-sphere">Веб-разработка</option>
+											<option value="select-sphere">Дизайн и печать</option>
+											<option value="select-sphere">Юридическая помощь</option>
+											<option value="select-sphere">Репетиторство</option>
+											<option value="select-sphere">Красота и здоровье</option>
+										</select>
+						            </div>
+						            <div class="col-md-12">
+										<label for="name-order">Наименование заказа*</label>
+										<input id="name-order" name="name-order" type="text" placeholder="Наименование заказа" maxlength="40">
+										<label for="description">Описание заказа*</label>
+										<textarea id="description" name="description" rows="7" type="text" placeholder="Опишите подробно ваши пожелания по работе, чтобы исполнители лучше оценили вашу задачу." maxlength="200"></textarea>
+							            <div class="load">
+							            	<label>Изображение заказа</label>
+							            	<p>Используйте изображения, чтобы проиллюстрировать ваш заказ. <br> Задания с фотографиями получают в два раза больше предложений от исполнителей.</p>
+										 	<object>
+										 	<form method="post" enctype="multipart/form-data" id="uploadImages">
+										 		<div class="upload">
+													<label for="addImages" >Загрузите файлы...</label><img src="img/img-load.png" class="img-load" align="right" alt="Загрузить">
+				    								<input required="required" accept="image" type="file" id="addImages" multiple="">
+				   										 <ul id="uploadImagesList">
+				    									    <li class="item template">
+				        									    <span class="img-wrap">
+				        									        <img src="image.jpg" alt="">
+				        									    </span>
+				        									    <span class="delete-link" title="Удалить"><img src="img/cancel.png"  alt="Закрыть"></span>
+				        									</li>
+				   										 </ul>
+				   								</div>
+				   							</form>
+				   							</object>
+							            </div>
+							        </div>
+						            <div class="col-md-4">
+										<label for="date-order">Дата и время выполнения заказа*</label>
+										<input id="date-order" name="date-order" type="datetime-local" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}T[0-9]{2}:[0-9]{2}" placeholder="20-09-2018 12:00">
+										<!--<img src="img/calendar.png" alt="Дата" style="position: absolute; display: inline; right: 0; top: 40%">-->
+						            </div>
+						            <div class="col-md-12">
+						            	<label for="price">Сумма заказа*</label>
+						            	<div class="col-md-5">
+											<label for="range">
+		      		      		      			<input type="range" name="range" id="range" min="0" max="500" step="5" value="250"/>
+				      		      		    </label>
+		 									<output for="range" class="output"></output>
+										</div>
+
+										<div class="col-md-4 left-wrap" style="vertical-align: top;">
+											<input id="price" name="price" type="number" placeholder="Точная сумма заказа, руб." min="0" max="500000">
+										</div>
+										
+						            </div>
+						            <div class="col-md-5">
+										<label for="payment">Способ оплаты*</label>
+										<select id="payment" name="payment" class="yellow-select">
+											<option value="select-payment">Оплата наличными</option>
+											<option value="select-payment">Оплата через Безопасная сделка</option>
+										</select>
+						            </div>
+						            <div class="col-md-7"></div>
+						            <div class="col-md-5">
+										<label for="country">Страна*</label>
+										<select id="country" name="country">
+											<option value="select-country">Россия</option>
+											<option value="select-country">Беларусь</option>
+										</select>
+						            </div>
+						            <div class="col-md-7 left-wrap">
+										<label for="region">Регион</label>
+										<input id="region" name="region" type="text" placeholder="Ваша область, район" maxlength="80">
+						            </div>
+						            <div class="col-md-5">
+										<label for="city">Населенный пункт*</label>
+										<input id="city" name="city" type="text" placeholder="Ваш город" maxlength="40">
+						            </div>
+						            <div class="col-md-12">
+							            <a href="order-app.html" class="btn green">Опубликовать заказ</a>
+							            <p class="message">Нажимая «Опубликовать», вы соглашаетесь с правилами платёжного сервиса «Безопасная сделка». Ваш банк может взимать дополнительную комиссию.</p>
+							        </div>
+						        </div>
+					        </form>
+					    	</div>
+					    </div>
+				</div>
+        </div>
+
+		<div class="change-profile">
+			<div class="container">
+        		<div class="col-md-6">
+        			<h2>Ищете заказы? <br>Станьте исполнителем!</h2>
+        			<p>Мы поможем Вам реализовать свои услуги.</p>
+        		</div>
+        		<div class="col-md-6">
+        			<a href="sign-master.html" class="btn green-contour">Зарегистрироваться как исполнитель</a>
+        		</div>
+        	</div>
+        </div>
+
+
+        <!--Footer-->
+		<footer class="container-footer"> 
+		  	<div class="container">
+		  		<div class="col-md-12">
+					<div class="social">
+							<span>Присоединяйтесь к нам:</span>
+							<span>
+								<a href="https://www.facebook.com/mymastering/"><img src="img/social/fb.png" alt="Facebook"/></a>
+								<a href="https://www.twitter.com/mymastering/"><img src="img/social/tw.png" alt="Twitter"/></a>
+								<a href="https://www.youtube.com/mymastering/"><img src="img/social/yt.png" alt="Youtube"/></a>
+								<a href="https://www.instagram.com/mymastering/"><img src="img/social/in.png" alt="Instagram"/></a>
+							</span>
+					</div>
+        		</div>
+		    	<div class="row">
+					<div class="col-md-3">
+						<a href="index.html">
+							<object type="image/svg+xml" class="logo" data="img/logo.svg" width="80" align="right">
+							  <img src="img/logo-small.png" class="logo" alt="image format png" />
+							</object>
+						</a>
+					</div>
+		     
+			    	<div class="col-md-3">
+						<ul class="main">
+			    				<li><a href="how_work.html">Как работает Mymastering</a></li>
+			    				<li><a href="customer.html">Заказчикам</a></li>
+				                <li><a href="master.html">Исполнителям</a></li>
+			      		</ul>
+					</div>
+				     
+				    <div class="col-md-3">
+						<ul class="info">
+						        <li><a href="prices.html">Цены и услуги</a></li>
+						        <li><a href="subscribe.html">Подписка</a></li>
+						        <li><a href="privacy_policy.html">Политика конфиденциальности</a></li>
+				      	</ul>
+					</div>
+
+					<div class="col-md-3">
+						<ul class="contact">
+						        <li><a href="help.html">Помощь</a></li>
+						        <li><a href="faq.html">Частые вопросы</a></li>
+						        <li><a href="contacts.html">Контакты</a></li>
+				        </ul>
+					</div>
+			   	</div>
+			    <div class="copyright">
+			        <p>Copyright © 2018 A-Stock</p>
+			    </div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/pic_download.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+
+
+label[for=range] {
+  position: relative;
+  height: 18px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #d1d4d0;
+  margin-top: 20px;
+}
+
+input[type=range] {
+  position: relative;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  width: 100%;
+  height: 18px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    position: relative;
+     -webkit-appearance: none;
+    cursor: pointer;
+    width: 30px;
+    height: 12px;
+    margin-bottom: 15px;
+    /*border: 1px solid #767875;*/
+    background: transparent;
+    box-shadow: 1px 1px 10px -1px rgba(0, 0, 0, 0.5),
+    -25px 0 0 10px rgba(90, 184, 6, 0.5),
+    -75px 0 0 10px rgba(90, 184, 6, 0.5),
+    -125px 0 0 10px rgba(90, 184, 6, 0.5),
+    -175px 0 0 10px rgba(90, 184, 6, 0.5),
+    -225px 0 0 10px rgba(90, 184, 6, 0.5),
+    -275px 0 0 10px rgba(90, 184, 6, 0.5),
+    -325px 0 0 10px rgba(90, 184, 6, 0.5),
+    -375px 0 0 10px rgba(90, 184, 6, 0.5),
+    -425px 0 0 10px rgba(90, 184, 6, 0.5),
+    -475px 0 0 10px rgba(90, 184, 6, 0.5),
+    -525px 0 0 10px rgba(90, 184, 6, 0.5);
+    z-index: 2;
+}
+
+.output {
+  position: relative;
+  display: inline-block;
+  left: 5px;
+  top: -12px;
+  text-align: left;
+  width: 100%;
+  font-size: 1em;
+  font-family: 'Exo 2', sans-serif;
+  color: #b4cd93;
+}

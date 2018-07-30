@@ -41,3 +41,8 @@
         $(this).next('.hide').slideDown();
 
     });
+
+//price - order-app
+$('#range').on("input", function() {
+    $('.output').val(this.value +" 000  руб." );
+    }).trigger("change");

@@ -57,13 +57,16 @@
 						            </div>
 						            <div class="col-md-4">
 										<label for="country">Страна*</label>
-										<input id="country" name="country" type="text" placeholder="Ваша страна" maxlength="40">
+										<select id="country" name="country">
+											<option value="select-sphere">Россия</option>
+											<option value="select-sphere">Беларусь</option>
+										</select>
 						            </div>
 						            <div class="col-md-3">
 										<label for="zip">Индекс</label>
 										<input id="zip" name="zip" type="text" pattern="[0-9]{6}" placeholder="Ваш индекс" maxlength="6">
 						            </div>
-						            <div class="col-md-5 last">
+						            <div class="col-md-5">
 										<label for="region">Регион</label>
 										<input id="region" name="region" type="text" placeholder="Ваша область, район" maxlength="80">
 						            </div>
@@ -177,9 +180,11 @@
 										<label for="phone">Мобильный телефон*</label>
 										<input id="phone" name="phone" type="text" placeholder="Ваш телефон" maxlength="20">
 						            </div>
-						            <div class="col-md-12 check">
+						            <div class="check">
 						            		<input type="checkbox" name="agreement" checked> Я согласен с условиями <a href="privacy_policy.html">Пользовательского соглашения</a>
 						        	</div>
+						        	<a href="order-app.html" class="btn green">Отправить данные</a>
+						        	
 						        </div>
 					        </form>
 					    </div>
@@ -193,7 +198,7 @@
         			<p>Мы поможем Вам сделать правильный выбор!</p>
         		</div>
         		<div class="col-md-6">
-        			<a href="sign-customer.html" class="btn green">Зарегистрироваться как заказчик</a>
+        			<a href="sign-customer.html" class="btn green-contour">Зарегистрироваться как заказчик</a>
         		</div>
         	</div>
         </div>
